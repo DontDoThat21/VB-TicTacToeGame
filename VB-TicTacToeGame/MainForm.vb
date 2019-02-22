@@ -1,7 +1,4 @@
-﻿Imports MySql.Data
-Imports MySql.Data.MySqlClient
-
-Public Class TicTacToe
+﻿Public Class TicTacToe
     Dim WhosTurn As Boolean ' True will be X's turn. False is O's turn.
 
     Private Sub startGame_Click(sender As Object, e As EventArgs) Handles startGameBtn.Click
@@ -60,6 +57,12 @@ Public Class TicTacToe
     End Sub
 
     Private Sub ResetGame()
+        If WhosTurn Then
+            Label4.Text = Integer.Parse(Label4.Text) + 1
+        ElseIf WhosTurn = False Then
+            Label2.Text = Integer.Parse(Label2.Text) + 1
+        End If
+
         WhosTurn = True
         topLeftBtn.Enabled = False : topLeftBtn.Text = ""
         topMdlBtn.Enabled = False : topMdlBtn.Text = ""
@@ -83,9 +86,4 @@ Public Class TicTacToe
         botMdlBtn.Enabled = True
         botRightBtn.Enabled = True
     End Sub
-
-    Private Sub MySub()
-        ' fc
-    End Sub
-
 End Class
