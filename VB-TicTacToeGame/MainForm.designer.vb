@@ -42,6 +42,7 @@ Partial Class TicTacToe
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.settingsBtn = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -170,6 +171,7 @@ Partial Class TicTacToe
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Panel3.Controls.Add(Me.settingsBtn)
         Me.Panel3.Controls.Add(Me.currentTurnLabel)
         Me.Panel3.Controls.Add(Me.startGameBtn)
         Me.Panel3.Location = New System.Drawing.Point(163, 578)
@@ -192,7 +194,7 @@ Partial Class TicTacToe
         '
         Me.startGameBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.startGameBtn.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.startGameBtn.Location = New System.Drawing.Point(52, 32)
+        Me.startGameBtn.Location = New System.Drawing.Point(48, 7)
         Me.startGameBtn.Name = "startGameBtn"
         Me.startGameBtn.Size = New System.Drawing.Size(137, 37)
         Me.startGameBtn.TabIndex = 0
@@ -258,6 +260,17 @@ Partial Class TicTacToe
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "X Wins"
         '
+        'settingsBtn
+        '
+        Me.settingsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.settingsBtn.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.settingsBtn.Location = New System.Drawing.Point(48, 50)
+        Me.settingsBtn.Name = "settingsBtn"
+        Me.settingsBtn.Size = New System.Drawing.Size(137, 37)
+        Me.settingsBtn.TabIndex = 2
+        Me.settingsBtn.Text = "SETTINGS"
+        Me.settingsBtn.UseVisualStyleBackColor = True
+        '
         'TicTacToe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,4 +312,5 @@ Partial Class TicTacToe
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents settingsBtn As Button
 End Class

@@ -86,4 +86,9 @@
         botMdlBtn.Enabled = True
         botRightBtn.Enabled = True
     End Sub
+
+    Private Sub settingsBtn_Click(sender As Object, e As EventArgs) Handles settingsBtn.Click
+        Dim settingsbox = New SettingsForm()
+        settingsbox.Show()
+    End Sub
 End Class
