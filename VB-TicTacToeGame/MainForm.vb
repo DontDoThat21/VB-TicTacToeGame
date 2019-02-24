@@ -58,9 +58,9 @@
 
     Private Sub ResetGame()
         If WhosTurn Then
-            Label4.Text = Integer.Parse(Label4.Text) + 1
+            oWinsCountLabel.Text = Integer.Parse(oWinsCountLabel.Text) + 1
         ElseIf WhosTurn = False Then
-            Label2.Text = Integer.Parse(Label2.Text) + 1
+            xWinsCountLabel.Text = Integer.Parse(xWinsCountLabel.Text) + 1
         End If
 
         WhosTurn = True

@@ -1,5 +1,5 @@
 ﻿Public Class SettingsForm
-    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles difficultyTrackBar.Scroll
         Dim tb As TrackBar
         tb = CType(sender, TrackBar)
         If tb.Value < 5 And tb.Value <> 0 Then
@@ -11,11 +11,11 @@
         End If
         Select Case tb.Value
             Case 0
-                Label1.Text = "Easy"
+                difficultySettingLabel.Text = "Easy"
             Case 5
-                Label1.Text = "Medium"
+                difficultySettingLabel.Text = "Medium"
             Case 10
-                Label1.Text = "Impossible"
+                difficultySettingLabel.Text = "Impossible"
         End Select
     End Sub
 End Class

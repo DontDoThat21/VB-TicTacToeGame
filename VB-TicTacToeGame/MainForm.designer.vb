@@ -22,8 +22,8 @@ Partial Class TicTacToe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.tttoeLabel = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ticTacToeLabel = New System.Windows.Forms.Label()
+        Me.innerPanel1 = New System.Windows.Forms.Panel()
         Me.botRightBtn = New System.Windows.Forms.Button()
         Me.botMdlBtn = New System.Windows.Forms.Button()
         Me.botLeftBtn = New System.Windows.Forms.Button()
@@ -33,50 +33,50 @@ Partial Class TicTacToe
         Me.topRightBtn = New System.Windows.Forms.Button()
         Me.topMdlBtn = New System.Windows.Forms.Button()
         Me.topLeftBtn = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.innerPanel2 = New System.Windows.Forms.Panel()
+        Me.settingsBtn = New System.Windows.Forms.Button()
         Me.currentTurnLabel = New System.Windows.Forms.Label()
         Me.startGameBtn = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.settingsBtn = New System.Windows.Forms.Button()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.outerPanel1 = New System.Windows.Forms.Panel()
+        Me.scorePanel = New System.Windows.Forms.Panel()
+        Me.oWinsCountLabel = New System.Windows.Forms.Label()
+        Me.oWinsLabel = New System.Windows.Forms.Label()
+        Me.xWinsCountLabel = New System.Windows.Forms.Label()
+        Me.xWinsLabel = New System.Windows.Forms.Label()
+        Me.innerPanel1.SuspendLayout()
+        Me.innerPanel2.SuspendLayout()
+        Me.outerPanel1.SuspendLayout()
+        Me.scorePanel.SuspendLayout()
         Me.SuspendLayout()
         '
-        'tttoeLabel
+        'ticTacToeLabel
         '
-        Me.tttoeLabel.AutoSize = True
-        Me.tttoeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tttoeLabel.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.tttoeLabel.Location = New System.Drawing.Point(274, 23)
-        Me.tttoeLabel.Name = "tttoeLabel"
-        Me.tttoeLabel.Size = New System.Drawing.Size(225, 29)
-        Me.tttoeLabel.TabIndex = 3
-        Me.tttoeLabel.Text = "TIC TAC TOE GUI"
-        Me.tttoeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ticTacToeLabel.AutoSize = True
+        Me.ticTacToeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ticTacToeLabel.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.ticTacToeLabel.Location = New System.Drawing.Point(274, 23)
+        Me.ticTacToeLabel.Name = "ticTacToeLabel"
+        Me.ticTacToeLabel.Size = New System.Drawing.Size(225, 29)
+        Me.ticTacToeLabel.TabIndex = 3
+        Me.ticTacToeLabel.Text = "TIC TAC TOE GUI"
+        Me.ticTacToeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel2
+        'innerPanel1
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel2.Controls.Add(Me.botRightBtn)
-        Me.Panel2.Controls.Add(Me.botMdlBtn)
-        Me.Panel2.Controls.Add(Me.botLeftBtn)
-        Me.Panel2.Controls.Add(Me.mdlRightBtn)
-        Me.Panel2.Controls.Add(Me.mdlMdlBtn)
-        Me.Panel2.Controls.Add(Me.mdlLeftBtn)
-        Me.Panel2.Controls.Add(Me.topRightBtn)
-        Me.Panel2.Controls.Add(Me.topMdlBtn)
-        Me.Panel2.Controls.Add(Me.topLeftBtn)
-        Me.Panel2.Location = New System.Drawing.Point(98, 40)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(548, 490)
-        Me.Panel2.TabIndex = 0
+        Me.innerPanel1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.innerPanel1.Controls.Add(Me.botRightBtn)
+        Me.innerPanel1.Controls.Add(Me.botMdlBtn)
+        Me.innerPanel1.Controls.Add(Me.botLeftBtn)
+        Me.innerPanel1.Controls.Add(Me.mdlRightBtn)
+        Me.innerPanel1.Controls.Add(Me.mdlMdlBtn)
+        Me.innerPanel1.Controls.Add(Me.mdlLeftBtn)
+        Me.innerPanel1.Controls.Add(Me.topRightBtn)
+        Me.innerPanel1.Controls.Add(Me.topMdlBtn)
+        Me.innerPanel1.Controls.Add(Me.topLeftBtn)
+        Me.innerPanel1.Location = New System.Drawing.Point(98, 40)
+        Me.innerPanel1.Name = "innerPanel1"
+        Me.innerPanel1.Size = New System.Drawing.Size(548, 490)
+        Me.innerPanel1.TabIndex = 0
         '
         'botRightBtn
         '
@@ -168,16 +168,27 @@ Partial Class TicTacToe
         Me.topLeftBtn.TabIndex = 0
         Me.topLeftBtn.UseVisualStyleBackColor = True
         '
-        'Panel3
+        'innerPanel2
         '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel3.Controls.Add(Me.settingsBtn)
-        Me.Panel3.Controls.Add(Me.currentTurnLabel)
-        Me.Panel3.Controls.Add(Me.startGameBtn)
-        Me.Panel3.Location = New System.Drawing.Point(163, 578)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(420, 95)
-        Me.Panel3.TabIndex = 4
+        Me.innerPanel2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.innerPanel2.Controls.Add(Me.settingsBtn)
+        Me.innerPanel2.Controls.Add(Me.currentTurnLabel)
+        Me.innerPanel2.Controls.Add(Me.startGameBtn)
+        Me.innerPanel2.Location = New System.Drawing.Point(163, 578)
+        Me.innerPanel2.Name = "innerPanel2"
+        Me.innerPanel2.Size = New System.Drawing.Size(420, 95)
+        Me.innerPanel2.TabIndex = 4
+        '
+        'settingsBtn
+        '
+        Me.settingsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
+        Me.settingsBtn.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.settingsBtn.Location = New System.Drawing.Point(48, 50)
+        Me.settingsBtn.Name = "settingsBtn"
+        Me.settingsBtn.Size = New System.Drawing.Size(137, 37)
+        Me.settingsBtn.TabIndex = 2
+        Me.settingsBtn.Text = "SETTINGS"
+        Me.settingsBtn.UseVisualStyleBackColor = True
         '
         'currentTurnLabel
         '
@@ -201,75 +212,64 @@ Partial Class TicTacToe
         Me.startGameBtn.Text = "PLAY GAME"
         Me.startGameBtn.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'outerPanel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Location = New System.Drawing.Point(13, 74)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(747, 726)
-        Me.Panel1.TabIndex = 2
+        Me.outerPanel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.outerPanel1.Controls.Add(Me.scorePanel)
+        Me.outerPanel1.Controls.Add(Me.innerPanel2)
+        Me.outerPanel1.Controls.Add(Me.innerPanel1)
+        Me.outerPanel1.Location = New System.Drawing.Point(13, 74)
+        Me.outerPanel1.Name = "outerPanel1"
+        Me.outerPanel1.Size = New System.Drawing.Size(747, 726)
+        Me.outerPanel1.TabIndex = 2
         '
-        'Panel4
+        'scorePanel
         '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Location = New System.Drawing.Point(666, 209)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(65, 153)
-        Me.Panel4.TabIndex = 5
+        Me.scorePanel.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.scorePanel.Controls.Add(Me.oWinsCountLabel)
+        Me.scorePanel.Controls.Add(Me.oWinsLabel)
+        Me.scorePanel.Controls.Add(Me.xWinsCountLabel)
+        Me.scorePanel.Controls.Add(Me.xWinsLabel)
+        Me.scorePanel.Location = New System.Drawing.Point(666, 209)
+        Me.scorePanel.Name = "scorePanel"
+        Me.scorePanel.Size = New System.Drawing.Size(65, 153)
+        Me.scorePanel.TabIndex = 5
         '
-        'Label4
+        'oWinsCountLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(26, 112)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "0"
+        Me.oWinsCountLabel.AutoSize = True
+        Me.oWinsCountLabel.Location = New System.Drawing.Point(26, 112)
+        Me.oWinsCountLabel.Name = "oWinsCountLabel"
+        Me.oWinsCountLabel.Size = New System.Drawing.Size(13, 13)
+        Me.oWinsCountLabel.TabIndex = 3
+        Me.oWinsCountLabel.Text = "0"
         '
-        'Label3
+        'oWinsLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 99)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "O Wins"
+        Me.oWinsLabel.AutoSize = True
+        Me.oWinsLabel.Location = New System.Drawing.Point(11, 99)
+        Me.oWinsLabel.Name = "oWinsLabel"
+        Me.oWinsLabel.Size = New System.Drawing.Size(42, 13)
+        Me.oWinsLabel.TabIndex = 2
+        Me.oWinsLabel.Text = "O Wins"
         '
-        'Label2
+        'xWinsCountLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(26, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(13, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "0"
+        Me.xWinsCountLabel.AutoSize = True
+        Me.xWinsCountLabel.Location = New System.Drawing.Point(26, 24)
+        Me.xWinsCountLabel.Name = "xWinsCountLabel"
+        Me.xWinsCountLabel.Size = New System.Drawing.Size(13, 13)
+        Me.xWinsCountLabel.TabIndex = 1
+        Me.xWinsCountLabel.Text = "0"
         '
-        'Label1
+        'xWinsLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "X Wins"
-        '
-        'settingsBtn
-        '
-        Me.settingsBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.settingsBtn.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.settingsBtn.Location = New System.Drawing.Point(48, 50)
-        Me.settingsBtn.Name = "settingsBtn"
-        Me.settingsBtn.Size = New System.Drawing.Size(137, 37)
-        Me.settingsBtn.TabIndex = 2
-        Me.settingsBtn.Text = "SETTINGS"
-        Me.settingsBtn.UseVisualStyleBackColor = True
+        Me.xWinsLabel.AutoSize = True
+        Me.xWinsLabel.Location = New System.Drawing.Point(11, 11)
+        Me.xWinsLabel.Name = "xWinsLabel"
+        Me.xWinsLabel.Size = New System.Drawing.Size(41, 13)
+        Me.xWinsLabel.TabIndex = 0
+        Me.xWinsLabel.Text = "X Wins"
         '
         'TicTacToe
         '
@@ -277,23 +277,23 @@ Partial Class TicTacToe
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(772, 812)
-        Me.Controls.Add(Me.tttoeLabel)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.ticTacToeLabel)
+        Me.Controls.Add(Me.outerPanel1)
         Me.Name = "TicTacToe"
         Me.Text = "Tic Tac Toe"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.innerPanel1.ResumeLayout(False)
+        Me.innerPanel2.ResumeLayout(False)
+        Me.innerPanel2.PerformLayout()
+        Me.outerPanel1.ResumeLayout(False)
+        Me.scorePanel.ResumeLayout(False)
+        Me.scorePanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents tttoeLabel As Label
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ticTacToeLabel As Label
+    Friend WithEvents innerPanel1 As Panel
     Friend WithEvents botRightBtn As Button
     Friend WithEvents botMdlBtn As Button
     Friend WithEvents botLeftBtn As Button
@@ -303,14 +303,14 @@ Partial Class TicTacToe
     Friend WithEvents topRightBtn As Button
     Friend WithEvents topMdlBtn As Button
     Friend WithEvents topLeftBtn As Button
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents innerPanel2 As Panel
     Friend WithEvents currentTurnLabel As Label
     Friend WithEvents startGameBtn As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents outerPanel1 As Panel
+    Friend WithEvents scorePanel As Panel
+    Friend WithEvents oWinsCountLabel As Label
+    Friend WithEvents oWinsLabel As Label
+    Friend WithEvents xWinsCountLabel As Label
+    Friend WithEvents xWinsLabel As Label
     Friend WithEvents settingsBtn As Button
 End Class
