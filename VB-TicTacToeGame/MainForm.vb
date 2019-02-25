@@ -1,15 +1,18 @@
 ﻿Public Class TicTacToe
     Dim WhosTurn As Boolean ' True will be X's turn. False is O's turn.
 
+    ' Handles click when user wants to start the game.
     Private Sub startGame_Click(sender As Object, e As EventArgs) Handles startGameBtn.Click
         HandleEnablingXOButtons()
     End Sub
 
+    ' Handles boot of app; Sets global turn bool to true (x) and then calls the turn indicator/setter method.
     Private Sub TTToe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WhosTurn = True
         LabelManipulator()
     End Sub
 
+    ' Runs when user clicks a square. Always checks for win condition, even when <5 results. Change that? 
     Private Sub Sector_Click(sender As Object, e As EventArgs) Handles topMdlBtn.Click, topRightBtn.Click, topLeftBtn.Click, mdlRightBtn.Click, mdlMdlBtn.Click, mdlLeftBtn.Click, botRightBtn.Click, botMdlBtn.Click, botLeftBtn.Click
         Dim btn = CType(sender, Button)
         If String.IsNullOrEmpty(btn.Text) Then
@@ -26,6 +29,7 @@
         End If
     End Sub
 
+    ' Handles label; Changes turn text.
     Private Sub LabelManipulator()
         If WhosTurn = True Then
             currentTurnLabel.Text = "X's Turn."
@@ -34,6 +38,7 @@
         End If
     End Sub
 
+    ' Handles win conditions, checking if x, x, x in a given combo is true; this is a victory.
     Private Sub WinConditionCheck(ltr As Char)
         If topLeftBtn.Text = ltr And topMdlBtn.Text = ltr And topRightBtn.Text = ltr Then
             MsgBox(ltr + " won.1") : ResetGame() ' Top left, top middle, top right win scenario
@@ -56,6 +61,7 @@
         End If
     End Sub
 
+    ' Handles resetting of game elements, and updates the win count. Todo: Add DRAW count
     Private Sub ResetGame()
         If WhosTurn Then
             oWinsCountLabel.Text = Integer.Parse(oWinsCountLabel.Text) + 1
@@ -75,6 +81,7 @@
         botRightBtn.Enabled = False : botRightBtn.Text = ""
     End Sub
 
+    ' Sole responsibility is enabling game elements when user starts game.
     Private Sub HandleEnablingXOButtons()
         topLeftBtn.Enabled = True
         topMdlBtn.Enabled = True
@@ -87,6 +94,7 @@
         botRightBtn.Enabled = True
     End Sub
 
+    ' Handles settings sub-form; opens new form.
     Private Sub settingsBtn_Click(sender As Object, e As EventArgs) Handles settingsBtn.Click
         Dim settingsbox = New SettingsForm()
         settingsbox.Show()
