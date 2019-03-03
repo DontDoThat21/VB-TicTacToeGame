@@ -127,5 +127,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreImageBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

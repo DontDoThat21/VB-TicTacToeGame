@@ -225,7 +225,9 @@ Partial Class TicTacToe
         '
         'scorePanel
         '
-        Me.scorePanel.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.scorePanel.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.scorePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.scorePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.scorePanel.Controls.Add(Me.oWinsCountLabel)
         Me.scorePanel.Controls.Add(Me.oWinsLabel)
         Me.scorePanel.Controls.Add(Me.xWinsCountLabel)
