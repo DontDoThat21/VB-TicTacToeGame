@@ -2,7 +2,7 @@
     Dim WhosTurn As Boolean ' True will be X's turn. False is O's turn.
 
     ' Handles click when user wants to start the game.
-    Private Sub startGame_Click(sender As Object, e As EventArgs) Handles startGameBtn.Click
+    Private Sub StartGame_Click(sender As Object, e As EventArgs) Handles startGameBtn.Click
         HandleEnablingXOButtons()
     End Sub
 
@@ -95,7 +95,7 @@
     End Sub
 
     ' Handles settings sub-form; opens new form.
-    Private Sub settingsBtn_Click(sender As Object, e As EventArgs) Handles settingsBtn.Click
+    Private Sub SettingsBtn_Click(sender As Object, e As EventArgs) Handles settingsBtn.Click
         Dim settingsbox = New SettingsForm()
         settingsbox.Show()
     End Sub
