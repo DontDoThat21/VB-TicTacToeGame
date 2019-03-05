@@ -41,23 +41,23 @@
     ' Handles win conditions, checking if x, x, x in a given combo is true; this is a victory.
     Private Sub WinConditionCheck(ltr As Char)
         If topLeftBtn.Text = ltr And topMdlBtn.Text = ltr And topRightBtn.Text = ltr Then
-            MsgBox(ltr + " won.1") : ResetGame() ' Top left, top middle, top right win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top left, top middle, top right win scenario
         ElseIf topLeftBtn.Text = ltr And mdlMdlBtn.Text = ltr And botRightBtn.Text = ltr Then
-            MsgBox(ltr + " won.2") : ResetGame() ' Top left, Middle middle, bottom right win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top left, Middle middle, bottom right win scenario
         ElseIf topLeftBtn.Text = ltr And mdlLeftBtn.Text = ltr And botLeftBtn.Text = ltr Then
-            MsgBox(ltr + " won.3") : ResetGame() ' Top left, middle left, bot left win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top left, middle left, bot left win scenario
         ElseIf topMdlBtn.Text = ltr And mdlMdlBtn.Text = ltr And botMdlBtn.Text = ltr Then
-            MsgBox(ltr + " won.4") : ResetGame() ' Top middle, middle middle, bottom middle win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top middle, middle middle, bottom middle win scenario
         ElseIf topRightBtn.Text = ltr And mdlMdlBtn.Text = ltr And botLeftBtn.Text = ltr Then
-            MsgBox(ltr + " won.5") : ResetGame() ' Top right, middle middle, bottom left win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top right, middle middle, bottom left win scenario
         ElseIf topRightBtn.Text = ltr And mdlRightBtn.Text = ltr And botMdlBtn.Text = ltr Then
-            MsgBox(ltr + " won.6") : ResetGame() ' Top middle, middle middle, bottom middle win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Top middle, middle middle, bottom middle win scenario
         ElseIf mdlLeftBtn.Text = ltr And mdlMdlBtn.Text = ltr And mdlRightBtn.Text = ltr Then
-            MsgBox(ltr + " won.7") : ResetGame() ' Middle left, middle middle, middle right win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Middle left, middle middle, middle right win scenario
         ElseIf botLeftBtn.Text = ltr And botMdlBtn.Text = ltr And botRightBtn.Text = ltr Then
-            MsgBox(ltr + " won.8") : ResetGame() ' Bot left, bot middle, bot right win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Bot left, bot middle, bot right win scenario
         ElseIf topRightBtn.Text = ltr And mdlRightBtn.Text = ltr And botRightBtn.Text = ltr Then
-            MsgBox(ltr + " won.9") : ResetGame() ' Bot left, bot middle, bot right win scenario
+            MsgBox(ltr + " won.") : ResetGame() ' Bot left, bot middle, bot right win scenario
         End If
     End Sub
 
