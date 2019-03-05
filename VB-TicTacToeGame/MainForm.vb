@@ -8,7 +8,6 @@
 
     ' Handles boot of app; Sets global turn bool to true (x) and then calls the turn indicator/setter method.
     Private Sub TTToe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim x = New ComputerPlayerAI(1)
         WhosTurn = True
         LabelManipulator()
     End Sub
