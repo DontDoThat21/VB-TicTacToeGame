@@ -8,11 +8,12 @@
 
     ' Handles boot of app; Sets global turn bool to true (x) and then calls the turn indicator/setter method.
     Private Sub TTToe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim x = New ComputerPlayerAI(1)
         WhosTurn = True
         LabelManipulator()
     End Sub
 
-    ' Runs when user clicks a square. Always checks for win condition, even when <5 results. Change that? 
+    ' Runs when user clicks a square. Always checks for win condition, even when < 5 results. Change that? 
     Private Sub Sector_Click(sender As Object, e As EventArgs) Handles topMdlBtn.Click, topRightBtn.Click, topLeftBtn.Click, mdlRightBtn.Click, mdlMdlBtn.Click, mdlLeftBtn.Click, botRightBtn.Click, botMdlBtn.Click, botLeftBtn.Click
         Dim btn = CType(sender, Button)
         If String.IsNullOrEmpty(btn.Text) Then

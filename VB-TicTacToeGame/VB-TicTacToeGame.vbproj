@@ -74,6 +74,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerPlayerAI.vb" />
     <Compile Include="MainForm.designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
